@@ -30,5 +30,5 @@ RedmineApp::Application.configure do
 
   config.active_support.deprecation = :log
 
-  config.activesupport.deprecation  = :silence
+  ActiveSupport::Deprecation.silenced = true
 end
