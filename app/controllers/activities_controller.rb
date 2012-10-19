@@ -28,6 +28,8 @@ class ActivitiesController < ApplicationController
     end
 
     @date_to ||= Date.today + 1
+
+
     @date_from = @date_to - @days
     @with_subprojects = params[:with_subprojects].nil? ? Setting.display_subprojects_issues? : (params[:with_subprojects] == '1')
     @author = (params[:user_id].blank? ? nil : User.active.find(params[:user_id]))
